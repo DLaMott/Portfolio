@@ -59,11 +59,32 @@ function Projects() {
               imgPath={leaf}
               isBlog={false}
               title="Data structures and Algorithim in Java"
-              description="Used the plant disease dataset from Kaggle and trained a image classifer model using 'PyTorch' framework using CNN and Transfer Learning with 38 classes of various plant leaves. The model was successfully able to detect diseased and healthy leaves of 14 unique plants. I was able to achieve an accuracy of 98% by using Resnet34 pretrained model."
+              description=""
               ghLink="https://github.com/DLaMott/DataStructures"
               demoLink="https://github.com/DLaMott/DataStructures"
             />
           </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={leaf}
+              isBlog={false}
+              title="Snake"
+              description=""
+              demoLink="https://github.com/DLaMott/DataStructures"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={leaf}
+              isBlog={false}
+              title="Space Invaders"
+              description=""
+              demoLink="https://github.com/DLaMott/DataStructures"
+            />
+          </Col>
+          
         </Row>
       </Container>
     </Container>
