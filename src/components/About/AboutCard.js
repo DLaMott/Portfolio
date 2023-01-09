@@ -10,7 +10,7 @@ function AboutCard() {
           <p style={{ textAlign: "justify" }}>
             Hi Everyone, I am <span className="purple">Dylan LaMott </span>
             from <span className="purple"> NC, USA.</span>
-            <br />I am an associate software engineer for North western Mutual.
+            <br />I am an associate software engineer for Northwestern Mutual.
             <br />
             <br />
             Apart from coding, some other activities that I love to do!
@@ -23,14 +23,9 @@ function AboutCard() {
               <ImPointRight /> Learning new technologies
             </li>
             <li className="about-activity">
-              <ImPointRight /> Travelling
+              <ImPointRight /> Traveling
             </li>
           </ul>
-
-          <p style={{ color: "rgb(155 126 172)" }}>
-            "Strive to build things that make a difference!"{" "}
-          </p>
-          <footer className="blockquote-footer">Dylan LaMott</footer>
         </blockquote>
       </Card.Body>
     </Card>

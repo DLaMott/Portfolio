@@ -7,24 +7,47 @@ import {
   SiIntellijidea,
   SiVercel,
 } from "react-icons/si";
+import Tooltip, { tooltipClasses } from '@mui/material/Tooltip';
+import { hexToRgb, styled } from '@mui/material/styles';
+
+const BootstrapTooltip = styled(({ className, ...props }) => (
+  <Tooltip {...props} arrow classes={{ popper: className }} />
+))(({ theme }) => ({
+  [`& .${tooltipClasses.arrow}`]: {
+    color: hexToRgb("#c770f0"),
+  },
+  [`& .${tooltipClasses.tooltip}`]: {
+    backgroundColor: hexToRgb("#c770f0"),
+  },
+}));
 
 function Toolstack() {
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
       <Col xs={4} md={2} className="tech-icons">
-        <SiPycharm />
+        <BootstrapTooltip title="Pycharm" placement="top">
+          <div><SiPycharm /></div>
+        </BootstrapTooltip>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiVisualstudiocode />
+      <BootstrapTooltip title="VS Code" placement="top">
+        <div><SiVisualstudiocode /></div>
+        </BootstrapTooltip>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiPostman />
+      <BootstrapTooltip title="Postman" placement="top">
+        <div><SiPostman /></div>
+        </BootstrapTooltip>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiVercel />
+      <BootstrapTooltip title="Vercel" placement="top">
+        <div><SiVercel /></div>
+        </BootstrapTooltip>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiIntellijidea />
+      <BootstrapTooltip title="Intellij" placement="top">
+        <div><SiIntellijidea /></div>
+        </BootstrapTooltip>
       </Col>
     </Row>
   );

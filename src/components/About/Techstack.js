@@ -15,46 +15,86 @@ import {
   SiJava,
   SiKubernetes,
   SiDocker,
+  SiAmazonaws,
 } from "react-icons/si";
+import Tooltip, { tooltipClasses } from '@mui/material/Tooltip';
+import { hexToRgb, styled } from '@mui/material/styles';
+
+const BootstrapTooltip = styled(({ className, ...props }) => (
+  <Tooltip {...props} arrow classes={{ popper: className }} />
+))(({ theme }) => ({
+  [`& .${tooltipClasses.arrow}`]: {
+    color: hexToRgb("#c770f0"),
+  },
+  [`& .${tooltipClasses.tooltip}`]: {
+    backgroundColor: hexToRgb("#c770f0"),
+  },
+}));
+
+
 
 function Techstack() {
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
       <Col xs={4} md={2} className="tech-icons">
-        <SiTerraform />
+        <BootstrapTooltip title="Terraform" placement="top">
+        <div><SiTerraform /></div>
+        </BootstrapTooltip>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <DiJavascript1 />
+      <BootstrapTooltip title="JS" placement="top">
+        <div><DiJavascript1 /></div>
+        </BootstrapTooltip>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <DiNodejs />
+      <BootstrapTooltip title="Node" placement="top">
+        <div><DiNodejs /></div>
+        </BootstrapTooltip>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <DiReact />
+      <BootstrapTooltip title="MySql" placement="top">
+        <div><DiMysql /></div>
+        </BootstrapTooltip>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <DiMysql />
+      <BootstrapTooltip title="Java" placement="top">
+        <div><SiJava /></div>
+        </BootstrapTooltip>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiJava />
+      <BootstrapTooltip title="Git" placement="top">
+      <div><DiGit /></div>
+        </BootstrapTooltip>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <DiGit />
+      <BootstrapTooltip title="Kafka" placement="top">
+      <div><SiApachekafka /></div>
+        </BootstrapTooltip>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiApachekafka />
+      <BootstrapTooltip title="Python" placement="top">
+      <div><DiPython /></div>
+        </BootstrapTooltip>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <DiPython />
+      <BootstrapTooltip title="Spring" placement="top">
+      <div><SiSpring /></div>
+        </BootstrapTooltip>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiSpring />
+      <BootstrapTooltip title="Kubernetes" placement="top">
+      <div><SiKubernetes /></div>
+        </BootstrapTooltip>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiKubernetes />
+      <BootstrapTooltip title="Docker" placement="top">
+      <div><SiDocker /></div>
+        </BootstrapTooltip>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiDocker />
+      <BootstrapTooltip title="AWS" placement="top">
+      <div><SiAmazonaws /></div>
+        </BootstrapTooltip>
       </Col>
     </Row>
   );

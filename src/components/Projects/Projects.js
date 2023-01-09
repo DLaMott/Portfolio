@@ -26,7 +26,8 @@ function Projects() {
               imgPath={chip8}
               isBlog={false}
               title="Chip8"
-              description="Chip8 emulator written in Java. This emulator supports the ability to load in additional rom files to allow for a multitude of games to be played."
+              description="Chip8 emulator written in Java. This emulator supports the ability to load in additional rom files to allow for a multitude of games to be played. 
+              This was one of my first projects created while studying Java."
               ghLink="https://github.com/DLaMott/Chip8"
               demoLink="https://github.com/DLaMott/Chip8"
             />
@@ -37,7 +38,8 @@ function Projects() {
               imgPath={imageAi}
               isBlog={false}
               title="Open AI Discord Bot"
-              description="Discord bot using the Open AI APIs. Currently this bot utilizes the open AI image generation and the text model."
+              description="Discord bot using the Open AI APIs built with Node.js. Currently this bot utilizes the open AI image generation and the text model. This AI bot is deployed using repl 24/7 and has live health monitoring features
+              with the aid of uptime-robot."
               ghLink="https://github.com/DLaMott/OpenAIDiscordBot"
               demoLink="https://github.com/DLaMott/OpenAIDiscordBot"
             />
@@ -48,7 +50,7 @@ function Projects() {
               imgPath={npc}
               isBlog={false}
               title="NPC Generation"
-              description="A Spigot plugin with over 170,000+ downloads. This server side plugin is used to allow the creation of custom NPCs in minecraft."
+              description="A Spigot plugin with over 170,000+ downloads built with Java. This server side plugin is used to allow the creation of custom NPCs in minecraft."
               ghLink="https://github.com/DLaMott/Npc"
               demoLink="https://github.com/DLaMott/Npc"              
             />
@@ -59,7 +61,8 @@ function Projects() {
               imgPath={data}
               isBlog={false}
               title="Data structures and Algorithim in Java"
-              description="This repo was created to aid newer developers in understanding data structures and algorithims in Java."
+              description="This repo was created to aid newer developers in understanding data structures and algorithims in Java. This repo is also used as a study tool for myself to keep
+              the content fresh!"
               ghLink="https://github.com/DLaMott/DataStructures"
               demoLink="https://github.com/DLaMott/DataStructures"
             />
@@ -70,7 +73,7 @@ function Projects() {
               imgPath={snake}
               isBlog={false}
               title="Snake"
-              description="The classic Snake Game written in Java script. This is deployed within my personal site and can be played using the browsers and a mobile device."
+              description="The classic Snake Game written in JS. This is deployed within my personal site and can be played using the browser and or a mobile device."
               demoLink="https://dlamott.github.io/snake.html"
             />
           </Col>
@@ -80,7 +83,7 @@ function Projects() {
               imgPath={space}
               isBlog={false}
               title="Space Invaders"
-              description="The classic Space invaders written in Java script. This is deployed within my personal site and can be played using the browsers and a mobile device."
+              description="The classic Space invaders written in JS. This is deployed within my personal site and can be played using the browser and or a mobile device."
               demoLink="https://dlamott.github.io/SpaceInvaders.html"
             />
           </Col>

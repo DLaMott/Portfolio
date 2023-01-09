@@ -2,10 +2,10 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import myImg from "../../Assets/avatar.svg";
 import Tilt from "react-parallax-tilt";
+import Toolstack from "../About/Toolstack";
+import Techstack from "../About/Techstack";
 import {
   AiFillGithub,
-  AiOutlineTwitter,
-  AiFillInstagram,
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 
@@ -13,6 +13,22 @@ function Home2() {
   return (
     <Container fluid className="home-about-section" id="about">
       <Container>
+
+      <Col md={12} className="home-about-social">
+            <h1 className="project-heading">
+          Professional <strong className="purple">Skillset </strong>
+        </h1>
+
+        <Techstack />
+
+        <h1 className="project-heading">
+          <strong className="purple">Tools</strong> I use
+        </h1>
+        <Toolstack />
+
+        </Col>
+
+
         <Row>
           <Col md={8} className="home-about-description">
             <h1 style={{ fontSize: "2.6em" }}>
@@ -28,10 +44,10 @@ function Home2() {
               </i>
               <br />
               <br />
-              My field of Interest's are building new &nbsp;
+              My field of interests are in: &nbsp;
               <i>
-                <b className="purple">Web Applications and Products </b> and
-                also in areas related to{" "}
+                <b className="purple">Web Applications</b>, <b className="purple">Cyber Security</b>, <b className="purple">Microservice technologies</b> and
+                also in areas related to,{" "}
                 <b className="purple">
                   Game and AI development.
                 </b>
