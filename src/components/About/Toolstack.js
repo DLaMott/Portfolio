@@ -10,6 +10,7 @@ import {
 import Tooltip, { tooltipClasses } from '@mui/material/Tooltip';
 import { hexToRgb, styled } from '@mui/material/styles';
 
+
 const BootstrapTooltip = styled(({ className, ...props }) => (
   <Tooltip {...props} arrow classes={{ popper: className }} />
 ))(({ theme }) => ({
@@ -21,12 +22,25 @@ const BootstrapTooltip = styled(({ className, ...props }) => (
   },
 }));
 
+
 function Toolstack() {
+
+  const[show, setShow] = React.useState(false);
+
+  const handleClick = () => {
+    if (show) {
+      setShow(false);
+    } else {
+      setShow(true);
+    }
+  };
+
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
       <Col xs={4} md={2} className="tech-icons">
-        <BootstrapTooltip disableFocusListener title="Pycharm" placement="top">
-          <div><SiPycharm /></div>
+        <BootstrapTooltip title="Pycharm" placement="top" open={show} onClick={handleClick}>
+          <div       onMouseOver={() => setShow(true)}
+      onMouseLeave={() => setShow(false)} ><SiPycharm /></div>
         </BootstrapTooltip>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
@@ -54,3 +68,4 @@ function Toolstack() {
 }
 
 export default Toolstack;
+
