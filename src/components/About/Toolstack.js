@@ -25,27 +25,27 @@ function Toolstack() {
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
       <Col xs={4} md={2} className="tech-icons">
-        <BootstrapTooltip title="Pycharm" placement="top">
+        <BootstrapTooltip disableFocusListener title="Pycharm" placement="top">
           <div><SiPycharm /></div>
         </BootstrapTooltip>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-      <BootstrapTooltip title="VS Code" placement="top">
+      <BootstrapTooltip disableFocusListener title="VS Code" placement="top">
         <div><SiVisualstudiocode /></div>
         </BootstrapTooltip>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-      <BootstrapTooltip title="Postman" placement="top">
+      <BootstrapTooltip disableFocusListener title="Postman" placement="top">
         <div><SiPostman /></div>
         </BootstrapTooltip>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-      <BootstrapTooltip title="Vercel" placement="top">
+      <BootstrapTooltip disableFocusListener title="Vercel" placement="top">
         <div><SiVercel /></div>
         </BootstrapTooltip>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-      <BootstrapTooltip title="Intellij" placement="top">
+      <BootstrapTooltip disableFocusListener title="Intellij" placement="top">
         <div><SiIntellijidea /></div>
         </BootstrapTooltip>
       </Col>

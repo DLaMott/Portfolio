@@ -37,62 +37,62 @@ function Techstack() {
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
       <Col xs={4} md={2} className="tech-icons">
-        <BootstrapTooltip title="Terraform" placement="top">
+        <BootstrapTooltip disableFocusListener title="Terraform" placement="top">
         <div><SiTerraform /></div>
         </BootstrapTooltip>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-      <BootstrapTooltip title="JS" placement="top">
+      <BootstrapTooltip disableFocusListener title="JS" placement="top">
         <div><DiJavascript1 /></div>
         </BootstrapTooltip>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-      <BootstrapTooltip title="Node" placement="top">
+      <BootstrapTooltip disableFocusListener title="Node" placement="top">
         <div><DiNodejs /></div>
         </BootstrapTooltip>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-      <BootstrapTooltip title="MySql" placement="top">
+      <BootstrapTooltip disableFocusListener title="MySql" placement="top">
         <div><DiMysql /></div>
         </BootstrapTooltip>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-      <BootstrapTooltip title="Java" placement="top">
+      <BootstrapTooltip disableFocusListener title="Java" placement="top">
         <div><SiJava /></div>
         </BootstrapTooltip>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-      <BootstrapTooltip title="Git" placement="top">
+      <BootstrapTooltip disableFocusListener title="Git" placement="top">
       <div><DiGit /></div>
         </BootstrapTooltip>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-      <BootstrapTooltip title="Kafka" placement="top">
+      <BootstrapTooltip disableFocusListener title="Kafka" placement="top">
       <div><SiApachekafka /></div>
         </BootstrapTooltip>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-      <BootstrapTooltip title="Python" placement="top">
+      <BootstrapTooltip disableFocusListener title="Python" placement="top">
       <div><DiPython /></div>
         </BootstrapTooltip>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-      <BootstrapTooltip title="Spring" placement="top">
+      <BootstrapTooltip disableFocusListener title="Spring" placement="top">
       <div><SiSpring /></div>
         </BootstrapTooltip>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-      <BootstrapTooltip title="Kubernetes" placement="top">
+      <BootstrapTooltip disableFocusListener title="Kubernetes" placement="top">
       <div><SiKubernetes /></div>
         </BootstrapTooltip>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-      <BootstrapTooltip title="Docker" placement="top">
+      <BootstrapTooltip disableFocusListener title="Docker" placement="top">
       <div><SiDocker /></div>
         </BootstrapTooltip>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-      <BootstrapTooltip title="AWS" placement="top">
+      <BootstrapTooltip disableFocusListener title="AWS" placement="top">
       <div><SiAmazonaws /></div>
         </BootstrapTooltip>
       </Col>
