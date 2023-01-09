@@ -34,66 +34,89 @@ const BootstrapTooltip = styled(({ className, ...props }) => (
 
 
 function Techstack() {
+
+  const[show, setShow] = React.useState(false);
+
+  const handleClick = () => {
+    if (show) {
+      setShow(false);
+    } else {
+      setShow(true);
+    }
+  };
+
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
       <Col xs={4} md={2} className="tech-icons">
-        <BootstrapTooltip disableFocusListener title="Terraform" placement="top">
-        <div><SiTerraform /></div>
+        <BootstrapTooltip open={show} onClick={handleClick} title="Terraform" placement="top">
+        <div onMouseOver={() => setShow(true)}
+      onMouseLeave={() => setShow(false)} ><SiTerraform /></div>
         </BootstrapTooltip>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-      <BootstrapTooltip disableFocusListener title="JS" placement="top">
-        <div><DiJavascript1 /></div>
+      <BootstrapTooltip open={show} onClick={handleClick} title="JS" placement="top">
+        <div onMouseOver={() => setShow(true)}
+      onMouseLeave={() => setShow(false)} ><DiJavascript1 /></div>
         </BootstrapTooltip>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-      <BootstrapTooltip disableFocusListener title="Node" placement="top">
-        <div><DiNodejs /></div>
+      <BootstrapTooltip open={show} onClick={handleClick} title="Node" placement="top">
+        <div onMouseOver={() => setShow(true)}
+      onMouseLeave={() => setShow(false)} ><DiNodejs /></div>
         </BootstrapTooltip>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-      <BootstrapTooltip disableFocusListener title="MySql" placement="top">
-        <div><DiMysql /></div>
+      <BootstrapTooltip open={show} onClick={handleClick} title="MySql" placement="top">
+        <div onMouseOver={() => setShow(true)}
+      onMouseLeave={() => setShow(false)} ><DiMysql /></div>
         </BootstrapTooltip>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-      <BootstrapTooltip disableFocusListener title="Java" placement="top">
-        <div><SiJava /></div>
+      <BootstrapTooltip open={show} onClick={handleClick} title="Java" placement="top">
+        <div onMouseOver={() => setShow(true)}
+      onMouseLeave={() => setShow(false)} ><SiJava /></div>
         </BootstrapTooltip>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-      <BootstrapTooltip disableFocusListener title="Git" placement="top">
-      <div><DiGit /></div>
+      <BootstrapTooltip open={show} onClick={handleClick} title="Git" placement="top">
+      <div onMouseOver={() => setShow(true)}
+      onMouseLeave={() => setShow(false)} ><DiGit /></div>
         </BootstrapTooltip>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-      <BootstrapTooltip disableFocusListener title="Kafka" placement="top">
-      <div><SiApachekafka /></div>
+      <BootstrapTooltip open={show} onClick={handleClick} title="Kafka" placement="top">
+      <div onMouseOver={() => setShow(true)}
+      onMouseLeave={() => setShow(false)} ><SiApachekafka /></div>
         </BootstrapTooltip>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-      <BootstrapTooltip disableFocusListener title="Python" placement="top">
-      <div><DiPython /></div>
+      <BootstrapTooltip open={show} onClick={handleClick} title="Python" placement="top">
+      <div onMouseOver={() => setShow(true)}
+      onMouseLeave={() => setShow(false)} ><DiPython /></div>
         </BootstrapTooltip>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-      <BootstrapTooltip disableFocusListener title="Spring" placement="top">
-      <div><SiSpring /></div>
+      <BootstrapTooltip open={show} onClick={handleClick} title="Spring" placement="top">
+      <div onMouseOver={() => setShow(true)}
+      onMouseLeave={() => setShow(false)} ><SiSpring /></div>
         </BootstrapTooltip>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-      <BootstrapTooltip disableFocusListener title="Kubernetes" placement="top">
-      <div><SiKubernetes /></div>
+      <BootstrapTooltip open={show} onClick={handleClick} title="Kubernetes" placement="top">
+      <div onMouseOver={() => setShow(true)}
+      onMouseLeave={() => setShow(false)} ><SiKubernetes /></div>
         </BootstrapTooltip>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-      <BootstrapTooltip disableFocusListener title="Docker" placement="top">
-      <div><SiDocker /></div>
+      <BootstrapTooltip open={show} onClick={handleClick} title="Docker" placement="top">
+      <div onMouseOver={() => setShow(true)}
+      onMouseLeave={() => setShow(false)} ><SiDocker /></div>
         </BootstrapTooltip>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-      <BootstrapTooltip disableFocusListener title="AWS" placement="top">
-      <div><SiAmazonaws /></div>
+      <BootstrapTooltip open={show} onClick={handleClick} title="AWS" placement="top">
+      <div onMouseOver={() => setShow(true)}
+      onMouseLeave={() => setShow(false)} ><SiAmazonaws /></div>
         </BootstrapTooltip>
       </Col>
     </Row>

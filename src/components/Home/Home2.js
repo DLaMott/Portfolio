@@ -35,19 +35,22 @@ function Home2() {
               LET ME <span className="purple"> INTRODUCE </span> MYSELF
             </h1>
             <p className="home-about-body">
-              I fell in love with programming and I have at least learnt
-              something, I think… 🤷‍♂️
+              I fell in love with programming and I have at least learned a few things, I think… 🤷‍♂️
               <br />
-              <br />I am fluent in classics like
+              <br />The language I use the most and am strongest in is
               <i>
-                <b className="purple"> Java, Javascript and Python. </b>
+                <b className="purple"> Java. </b>
+              </i>
+              <br />However, I have had much success with other programming languages such as:
+              <i>
+                <b className="purple"> JS, Python, and Swift. </b>
               </i>
               <br />
               <br />
               My field of interests are in: &nbsp;
               <i>
                 <b className="purple">Web Applications</b>, <b className="purple">Cyber Security</b>, <b className="purple">Microservice technologies</b> and
-                also in areas related to,{" "}
+                also in areas related to{" "}
                 <b className="purple">
                   Game and AI development.
                 </b>

@@ -39,28 +39,32 @@ function Toolstack() {
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
       <Col xs={4} md={2} className="tech-icons">
         <BootstrapTooltip title="Pycharm" placement="top" open={show} onClick={handleClick}>
-          <div       onMouseOver={() => setShow(true)}
+          <div onMouseOver={() => setShow(true)}
       onMouseLeave={() => setShow(false)} ><SiPycharm /></div>
         </BootstrapTooltip>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-      <BootstrapTooltip disableFocusListener title="VS Code" placement="top">
-        <div><SiVisualstudiocode /></div>
+      <BootstrapTooltip open={show} onClick={handleClick} title="VS Code" placement="top">
+        <div onMouseOver={() => setShow(true)}
+      onMouseLeave={() => setShow(false)} ><SiVisualstudiocode /></div>
         </BootstrapTooltip>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-      <BootstrapTooltip disableFocusListener title="Postman" placement="top">
-        <div><SiPostman /></div>
+      <BootstrapTooltip open={show} onClick={handleClick} title="Postman" placement="top">
+        <div onMouseOver={() => setShow(true)}
+      onMouseLeave={() => setShow(false)} ><SiPostman /></div>
         </BootstrapTooltip>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-      <BootstrapTooltip disableFocusListener title="Vercel" placement="top">
-        <div><SiVercel /></div>
+      <BootstrapTooltip open={show} onClick={handleClick} title="Vercel" placement="top">
+        <div onMouseOver={() => setShow(true)}
+      onMouseLeave={() => setShow(false)} ><SiVercel /></div>
         </BootstrapTooltip>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-      <BootstrapTooltip disableFocusListener title="Intellij" placement="top">
-        <div><SiIntellijidea /></div>
+      <BootstrapTooltip open={show} onClick={handleClick} title="Intellij" placement="top">
+        <div onMouseOver={() => setShow(true)}
+      onMouseLeave={() => setShow(false)} ><SiIntellijidea /></div>
         </BootstrapTooltip>
       </Col>
     </Row>
