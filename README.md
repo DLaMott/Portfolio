@@ -1,7 +1,4 @@
 
-
-You can fork this repo to modify and make changes of your own. Please proper credit by linking back to [Soumyajit4419](https://github.com/soumyajit4419/Portfolio). Thanks!
-
 This project was built using these technologies.
 
 - React.js

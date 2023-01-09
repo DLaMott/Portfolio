@@ -2,12 +2,12 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
-import leaf from "../../Assets/Projects/leaf.png";
-import emotion from "../../Assets/Projects/emotion.png";
-import editor from "../../Assets/Projects/codeEditor.png";
-import chatify from "../../Assets/Projects/chatify.png";
-import suicide from "../../Assets/Projects/suicide.png";
-import bitsOfCode from "../../Assets/Projects/blog.png";
+import npc from "../../Assets/Projects/npc.png";
+import snake from "../../Assets/Projects/snake.png";
+import imageAi from "../../Assets/Projects/imageAi.png";
+import data from "../../Assets/Projects/data.png";
+import space from "../../Assets/Projects/space.png";
+import chip8 from "../../Assets/Projects/chip8.png";
 
 function Projects() {
   return (
@@ -23,10 +23,10 @@ function Projects() {
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={chatify}
+              imgPath={chip8}
               isBlog={false}
               title="Chip8"
-              description="Chip8 emulator in Java"
+              description="Chip8 emulator written in Java. This emulator supports the ability to load in additional rom files to allow for a multitude of games to be played."
               ghLink="https://github.com/DLaMott/Chip8"
               demoLink="https://github.com/DLaMott/Chip8"
             />
@@ -34,10 +34,10 @@ function Projects() {
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={bitsOfCode}
+              imgPath={imageAi}
               isBlog={false}
               title="Open AI Discord Bot"
-              description="Discord bot using the Open AI APIs"
+              description="Discord bot using the Open AI APIs. Currently this bot utilizes the open AI image generation and the text model."
               ghLink="https://github.com/DLaMott/OpenAIDiscordBot"
               demoLink="https://github.com/DLaMott/OpenAIDiscordBot"
             />
@@ -45,10 +45,10 @@ function Projects() {
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={editor}
+              imgPath={npc}
               isBlog={false}
               title="NPC Generation"
-              description="Online code and markdown editor build with react.js. Online Editor which supports html, css, and js code with instant view of website. Online markdown editor for building README file which supports GFM, Custom Html tags with toolbar and instant preview.Both the editor supports auto save of work using Local Storage"
+              description="A Spigot plugin with over 170,000+ downloads. This server side plugin is used to allow the creation of custom NPCs in minecraft."
               ghLink="https://github.com/DLaMott/Npc"
               demoLink="https://github.com/DLaMott/Npc"              
             />
@@ -56,10 +56,10 @@ function Projects() {
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={leaf}
+              imgPath={data}
               isBlog={false}
               title="Data structures and Algorithim in Java"
-              description=""
+              description="This repo was created to aid newer developers in understanding data structures and algorithims in Java."
               ghLink="https://github.com/DLaMott/DataStructures"
               demoLink="https://github.com/DLaMott/DataStructures"
             />
@@ -67,21 +67,21 @@ function Projects() {
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={leaf}
+              imgPath={snake}
               isBlog={false}
               title="Snake"
-              description=""
-              demoLink="https://github.com/DLaMott/DataStructures"
+              description="The classic Snake Game written in Java script. This is deployed within my personal site and can be played using the browsers and a mobile device."
+              demoLink="https://dlamott.github.io/snake.html"
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={leaf}
+              imgPath={space}
               isBlog={false}
               title="Space Invaders"
-              description=""
-              demoLink="https://github.com/DLaMott/DataStructures"
+              description="The classic Space invaders written in Java script. This is deployed within my personal site and can be played using the browsers and a mobile device."
+              demoLink="https://dlamott.github.io/SpaceInvaders.html"
             />
           </Col>
           
