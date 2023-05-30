@@ -8,8 +8,8 @@ import imageAi from "../../Assets/Projects/imageAi.png";
 import data from "../../Assets/Projects/data.png";
 import space from "../../Assets/Projects/space.png";
 import chip8 from "../../Assets/Projects/chip8.png";
-import genconsumer from "../../Assets/Projects/ConsumerGenerator.png";
-import restgen from "../../Assets/Projects/RestGenerator.png";
+import genconsumer from "../../Assets/Projects/ConsumerGenerator.PNG";
+import restgen from "../../Assets/Projects/RestGenerator.PNG";
 import kafkacon from "../../Assets/Projects/KafkaConsumer.png";
 
 function Projects() {
