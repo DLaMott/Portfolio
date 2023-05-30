@@ -10,7 +10,7 @@ import space from "../../Assets/Projects/space.png";
 import chip8 from "../../Assets/Projects/chip8.png";
 import genconsumer from "../../Assets/Projects/ConsumerGenerator.PNG";
 import restgen from "../../Assets/Projects/RestGenerator.PNG";
-import kafkacon from "../../Assets/Projects/KafkaConsumer.png";
+import kafkacon from "../../Assets/Projects/KafkaConsumer.PNG";
 
 function Projects() {
   return (
