@@ -8,6 +8,9 @@ import imageAi from "../../Assets/Projects/imageAi.png";
 import data from "../../Assets/Projects/data.png";
 import space from "../../Assets/Projects/space.png";
 import chip8 from "../../Assets/Projects/chip8.png";
+import genconsumer from "../../Assets/Projects/ConsumerGenerator.png";
+import restgen from "../../Assets/Projects/RestGenerator.png";
+import kafkacon from "../../Assets/Projects/KafkaConsumer.png";
 
 function Projects() {
   return (
@@ -21,6 +24,41 @@ function Projects() {
           Here are a few projects I've worked on recently.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+
+        <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={restgen}
+              isBlog={false}
+              title="Yeoman Spring MS Generator"
+              description="As I make multiple Spring Rest Apis, I decided I wanted a yeoman generator more inline with development that I work on. This generator will build a
+              spring rest api with ready to go CRUD operations and is built using Gradle. This generator has been published to the npm registry and is ready for use."
+              ghLink="https://github.com/DLaMott/generator-spring-boot-rest-api"
+              demoLink="https://github.com/DLaMott/generator-spring-boot-rest-api"
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={kafkacon}
+              isBlog={false}
+              title="Spring Boot Kafka Consumer Showcase"
+              description="As a developer I wanted to showcase an up-to-date Spring implementation of a kafka consumer utilizing Gradle. This repo can be utilized as an example for 
+              error handling, payload consumption, and consumer configuration."
+              ghLink="https://github.com/DLaMott/spring-boot-kafka-consumer"
+              demoLink="https://github.com/DLaMott/spring-boot-kafka-consumer"
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={genconsumer}
+              isBlog={false}
+              title="Yeoman Spring Kafka Consumer"
+              description="As I make multiple Spring Kafka consumers, I noticed consumer setup can often be time consuming. This generator will build a
+              spring kafka consumer with ready to go operations and is built using Gradle. This generator has been published to the npm registry and is ready for usage. 
+              This was also linked to my Kafka consumer showcase to hopefully offer aid to other developers."
+              ghLink="https://github.com/DLaMott/generator-spring-boot-kafka-consumer"
+              demoLink="https://github.com/DLaMott/generator-spring-boot-kafka-consumer"
+            />
+          </Col>
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={chip8}
