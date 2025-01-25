@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 
 const Blog = () => {
   const posts = [
-    { id: 1, title: "understanding-react", slug: "understanding-react", date: "2025-01-20" },
-    { id: 2, title: "Mapping performance with TimedLdapTemplate", slug: "timedLdapTemplate", date: "2025-01-22" },
-    { id: 3, title: "Building a react express Ldap Viewer", slug: "ldapViewer", date: "2025-01-24" },
+    { id: 3, title: "Building a react markdown blog", slug: "reactBlog", date: "2025-01-25" },
+    { id: 1, title: "Mapping performance with TimedLdapTemplate", slug: "timedLdapTemplate", date: "2025-01-02" },
+    { id: 2, title: "Building a react express Ldap Viewer", slug: "ldapViewer", date: "2025-01-20" },
   ];
 
   const sortedPosts = posts.sort((a, b) => new Date(b.date) - new Date(a.date));
