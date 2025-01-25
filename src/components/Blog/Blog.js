@@ -34,7 +34,7 @@ const Blog = () => {
           position: "relative", // Ensures this is above particles
           backgroundColor: "#f5f5f5",
           minHeight: "100vh",
-          width: "66.6%",
+          width: "100%", // Ensure full width on mobile
           margin: "0 auto",
           padding: "50px 20px",
           boxShadow: "0 4px 10px rgba(0, 0, 0, 0.1)",
