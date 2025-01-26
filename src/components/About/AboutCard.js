@@ -10,7 +10,7 @@ function AboutCard() {
           <p style={{ textAlign: "justify" }}>
             Hi Everyone, I am <span className="purple">Dylan LaMott </span>
             from <span className="purple"> NC, USA.</span>
-            <br />I am a Software Engineer for Northwestern Mutual.
+            <br />I am a Software Engineer II for Northwestern Mutual.
             <br />
             <br />
             Apart from coding, some other activities that I love to do!

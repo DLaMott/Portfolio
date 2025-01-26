@@ -34,21 +34,55 @@ We used React-Bootstrap's grid system to center the content on the page and crea
 - A list of blog posts, each showing the title, publication date, and a link to the full post.
 
 
-```jsx
+```javascript
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Particle from "../Particle";
-import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { coy } from "react-syntax-highlighter/dist/esm/styles/prism";
 
-const Blog = () => {
-  const posts = [
-    { id: 3, title: "Building a react markdown blog", slug: "reactBlog", date: "2025-01-25" },
-    { id: 1, title: "Mapping performance with TimedLdapTemplate", slug: "timedLdapTemplate", date: "2025-01-02" },
-    { id: 2, title: "Building a react express Ldap Viewer", slug: "ldapViewer", date: "2025-01-20" },
-  ];
+const BlogPost = () => {
+  const { slug } = useParams();
+  const [content, setContent] = useState("");
 
-  const sortedPosts = posts.sort((a, b) => new Date(b.date) - new Date(a.date));
+  useEffect(() => {
+    import(`../../posts/${slug}.md`)
+      .then((res) => fetch(res.default))
+      .then((response) => response.text())
+      .then((text) => {
+        console.log("Markdown content loaded: ", text);
+        setContent(text);
+      })
+      .catch((err) => console.error("Error fetching markdown file:", err));
+  }, [slug]);
+
+  // Custom renderer for code blocks
+  const renderers = {
+    code({ children, className, node, ...rest }) {
+
+      const match = /language-(\w+)/.exec(className || '');
+      if (match) {
+        console.log("Code Block Detected: Language =", match[1], "Value =", children);
+        return (
+          <SyntaxHighlighter
+            {...rest}
+            PreTag="div"
+            language={match[1]}
+            style={coy}
+          >
+            {String(children).replace(/\n$/, '')}
+          </SyntaxHighlighter>
+        );
+      } else {
+        console.log("No specific language, defaulting to <code>:", children);
+        return <code {...rest}>{children}</code>;
+      }
+    },
+  };
 
   return (
     <div style={{ position: "relative", minHeight: "100vh" }}>
@@ -60,16 +94,16 @@ const Blog = () => {
           left: 0,
           width: "100%",
           height: "100%",
-          zIndex: 0, // Send particles to the back
+          zIndex: 0,
         }}
       >
         <Particle />
       </div>
 
-      {/* Blog content */}
+      {/* Blog post content */}
       <div
         style={{
-          position: "relative", // Ensures this is above particles
+          position: "relative",
           backgroundColor: "#f5f5f5",
           minHeight: "100vh",
           width: "66.6%",
@@ -77,7 +111,7 @@ const Blog = () => {
           padding: "50px 20px",
           boxShadow: "0 4px 10px rgba(0, 0, 0, 0.1)",
           borderRadius: "16px",
-          zIndex: 1, // Content above particles
+          zIndex: 1,
         }}
       >
         <Container>
@@ -90,66 +124,31 @@ const Blog = () => {
               }}
             >
               <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }}>
-                Welcome to My <strong className="purple">Blog</strong>
+                Blog Post: <strong className="purple">{slug.replace("-", " ")}</strong>
               </h1>
             </Col>
           </Row>
+
           <Row>
             <Col md={8} style={{ margin: "0 auto" }}>
-              <ul style={{ listStyleType: "none", padding: 0 }}>
-                {sortedPosts.map((post) => (
-                  <li
-                    key={post.id}
-                    style={{
-                      marginBottom: "20px",
-                      display: "flex",
-                      justifyContent: "center",
-                      flexDirection: "column",
-                      alignItems: "center",
-                    }}
-                  >
-                    {/* Post Date */}
-                    <div
-                      style={{
-                        fontSize: "1.2em",  // Match the font size of other text
-                        color: "#333",      // Darker text for better readability
-                        fontWeight: "600",  // Slightly bold for emphasis
-                        marginBottom: "10px",
-                        fontFamily: "Arial, sans-serif", // Match the font style with other text
-                      }}
-                    >
-                      {new Date(post.date).toLocaleDateString()}
-                    </div>
-
-                    {/* Post Title Button */}
-                    <Link
-                      to={`/blog/${post.slug}`}
-                      style={{
-                        display: "block",
-                        width: "100%",
-                        padding: "15px 20px",
-                        textAlign: "center",
-                        backgroundColor: "#6c63ff",
-                        color: "#fff",  // White text for better contrast
-                        textDecoration: "none",
-                        fontSize: "1.2em",
-                        fontWeight: "bold",
-                        borderRadius: "8px",
-                        transition: "transform 0.2s, background-color 0.2s",
-                        boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)", // Subtle shadow for depth
-                      }}
-                      onMouseEnter={(e) =>
-                        (e.target.style.backgroundColor = "#4f48c4")
-                      }
-                      onMouseLeave={(e) =>
-                        (e.target.style.backgroundColor = "#6c63ff")
-                      }
-                    >
-                      {post.title}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+              <div
+                style={{
+                  backgroundColor: "#e8e8e8",
+                  padding: "30px",
+                  borderRadius: "10px",
+                  boxShadow: "0 4px 10px rgba(0, 0, 0, 0.1)",
+                  textAlign: "justify",
+                  fontSize: "1.1em",
+                  margin: "0 auto",
+                }}
+              >
+                <ReactMarkdown
+                  remarkPlugins={[remarkGfm]}
+                  components={renderers}
+                >
+                  {content}
+                </ReactMarkdown>
+              </div>
             </Col>
           </Row>
         </Container>
@@ -158,13 +157,13 @@ const Blog = () => {
   );
 };
 
-export default Blog;
+export default BlogPost;
 ```
 
 ### Sorting the Posts
 To ensure the most recent posts show up first, we sorted the posts by their publication date. This was done easily with JavaScript's Date object, so the posts are displayed in descending order:
 
-```js
+```javascript
 const sortedPosts = posts.sort((a, b) => new Date(b.date) - new Date(a.date));
 ```
 
@@ -175,46 +174,11 @@ When a user clicks on a post, we navigate to a new page where the full post is d
 
 The post content is loaded dynamically from markdown files using react-markdown. The markdown content is fetched based on the slug of the post, which is passed in the URL.
 
-Here’s how we set up the post page:
-
-```jsx
-
-import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
-import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { nord } from "react-syntax-highlighter/dist/esm/styles/hljs";
-
-const BlogPost = () => {
-  const { slug } = useParams();
-  const [content, setContent] = useState("");
-
-  useEffect(() => {
-    import(`../../posts/${slug}.md`)
-      .then((res) => fetch(res.default))
-      .then((response) => response.text())
-      .then((text) => setContent(text))
-      .catch((err) => console.error("Error fetching markdown file:", err));
-  }, [slug]);
-
-  return (
-    <div>
-      <h1>Blog Post: {slug.replace("-", " ")}</h1>
-      <ReactMarkdown remarkPlugins={[remarkGfm]}>
-        {content}
-      </ReactMarkdown>
-    </div>
-  );
-};
-
-export default BlogPost;
-```
 
 ### Custom Code Block Rendering
 Since we wanted syntax highlighting for code blocks, we integrated react-syntax-highlighter. This library automatically highlights code inside the markdown posts.
 
-```jsx
+```javascript
 
 const renderers = {
   code({ children, className, node, ...rest }) {
@@ -236,7 +200,7 @@ We passed this custom renderer to the ReactMarkdown component to ensure code blo
 3. Adding the Particle Background
 One fun feature we added was a dynamic particle animation background. This makes the site feel more interactive and lively. We used a custom Particle component that renders the animation behind all the content.
 
-```jsx
+```javascript
 
 <div style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", zIndex: 0 }}>
   <Particle />

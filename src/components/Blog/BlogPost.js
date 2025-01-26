@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import Particle from "../Particle";
+import Particle from "../Particle"; // Optional background particles
 import { useParams } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import {nord} from "react-syntax-highlighter/dist/esm/styles/hljs";
+import { coy } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 const BlogPost = () => {
   const { slug } = useParams();
@@ -16,27 +16,33 @@ const BlogPost = () => {
       .then((res) => fetch(res.default))
       .then((response) => response.text())
       .then((text) => {
+        console.log("Markdown content loaded: ", text); // Log the content of the markdown
         setContent(text);
       })
       .catch((err) => console.error("Error fetching markdown file:", err));
   }, [slug]);
 
+  // Custom renderer for code blocks
   const renderers = {
     code({ children, className, node, ...rest }) {
+
       const match = /language-(\w+)/.exec(className || '');
       if (match) {
+        console.log("Code Block Detected: Language =", match[1], "Value =", children);
         return (
           <SyntaxHighlighter
             {...rest}
             PreTag="div"
-            language={match[1]} 
-            style={nord}
+            language={match[1]}
+            style={coy}
           >
             {String(children).replace(/\n$/, '')}
           </SyntaxHighlighter>
         );
+      } else {
+        console.log("No specific language, defaulting to <code>:", children);
+        return <code {...rest}>{children}</code>;
       }
-      return <code {...rest}>{children}</code>;
     },
   };
 
@@ -50,7 +56,7 @@ const BlogPost = () => {
           left: 0,
           width: "100%",
           height: "100%",
-          zIndex: 0, 
+          zIndex: 0, // Send particles to the back
         }}
       >
         <Particle />
@@ -59,15 +65,15 @@ const BlogPost = () => {
       {/* Blog post content */}
       <div
         style={{
-          position: "relative", 
+          position: "relative", // Ensures this is above particles
           backgroundColor: "#f5f5f5",
           minHeight: "100vh",
-          width: "100%", // Ensure full width on mobile
+          width: "66.6%",
           margin: "0 auto",
           padding: "50px 20px",
           boxShadow: "0 4px 10px rgba(0, 0, 0, 0.1)",
           borderRadius: "16px",
-          zIndex: 1, 
+          zIndex: 1, // Content above particles
         }}
       >
         <Container>
@@ -85,11 +91,12 @@ const BlogPost = () => {
             </Col>
           </Row>
 
+          {/* Content with light grey background and shadow */}
           <Row>
             <Col md={8} style={{ margin: "0 auto" }}>
               <div
                 style={{
-                  backgroundColor: "#e8e8e8", 
+                  backgroundColor: "#e8e8e8", // Light grey background
                   padding: "30px",
                   borderRadius: "10px",
                   boxShadow: "0 4px 10px rgba(0, 0, 0, 0.1)",
@@ -100,7 +107,7 @@ const BlogPost = () => {
               >
                 <ReactMarkdown
                   remarkPlugins={[remarkGfm]}
-                  components={renderers}
+                  components={renderers} // Using custom renderer for code blocks
                 >
                   {content}
                 </ReactMarkdown>
