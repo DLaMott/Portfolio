@@ -92,7 +92,7 @@ const BlogPost = () => {
             <Col md={8} style={{ margin: "0 auto" }}>
               <div
                 style={{
-                  backgroundColor: "#e8e8e8", // Light grey background
+                  backgroundColor: "#333", // Light grey background
                   padding: "30px",
                   borderRadius: "10px",
                   boxShadow: "0 4px 10px rgba(0, 0, 0, 0.1)",
