@@ -26,12 +26,14 @@
     "react-syntax-highlighter": "^15.6.1",
     "react-tsparticles": "^1.42.2",
     "remark-gfm": "^4.0.0",
+    "sitemap": "^8.0.0",
     "typewriter-effect": "^2.18.2",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "prebuild": "node sitemap.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
