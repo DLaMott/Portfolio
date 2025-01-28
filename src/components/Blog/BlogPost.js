@@ -97,7 +97,7 @@ const BlogPost = () => {
                   padding: "30px",
                   borderRadius: "10px",
                   boxShadow: "0 4px 10px rgba(0, 0, 0, 0.1)",
-                  textAlign: "justify",
+                  textAlign: "left",
                   fontSize: "1.1em",
                   margin: "0 auto",
                    color: "white"
