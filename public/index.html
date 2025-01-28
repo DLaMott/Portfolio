@@ -45,25 +45,25 @@
   <meta name="twitter:image"
     content="https://raw.githubusercontent.com/DLaMott/Portfolio/master/Images/index.png">
 
-
- <!-- Structured Data Markup -->
- <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Dylan LaMott",
-    "url": "https://portfolio-dlamott.vercel.app/",
-    "sameAs": [
-      "https://github.com/DLaMott"
-    ],
-    "jobTitle": "Software Developer",
-    "description": "Dylan Lamott developer portfolio showcasing React.js skills and projects.",
-    "image": "https://raw.githubusercontent.com/DLaMott/Portfolio/master/Images/index.png"
-  }
-</script>
-
-
-
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfilePage",
+        "name": "Dylan LaMott",
+        "mainEntity": {
+          "@id": "#main-author",
+          "@type": "Person",
+          "name": "Dylan LaMott"
+        },
+        "url": "https://portfolio-dlamott.vercel.app/",
+        "sameAs": [
+          "https://github.com/DLaMott"
+        ],
+        "jobTitle": "Software Developer",
+        "description": "Dylan Lamott developer portfolio showcasing React.js skills and projects.",
+        "image": "https://raw.githubusercontent.com/DLaMott/Portfolio/master/Images/index.png"
+      }
+      </script>
 </head>
 
 <body>
