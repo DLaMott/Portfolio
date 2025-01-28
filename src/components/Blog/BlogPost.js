@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { coy } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { atomDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 const BlogPost = () => {
   const { slug } = useParams();
@@ -33,7 +33,7 @@ const BlogPost = () => {
             {...rest}
             PreTag="div"
             language={match[1]}
-            style={coy}
+            style={atomDark}
           >
             {String(children).replace(/\n$/, '')}
           </SyntaxHighlighter>
@@ -70,6 +70,7 @@ const BlogPost = () => {
           boxShadow: "0 4px 10px rgba(0, 0, 0, 0.1)",
           borderRadius: "16px",
           zIndex: 1,
+          
         }}
       >
         <Container>
