@@ -100,6 +100,12 @@
   color: var(--imp-text-color);
 }
 
+.blog-post-content {
+  width: 66.6%;
+  padding: 20px;
+  margin: 0;
+}
+
 /* Mobile responsive adjustments */
 @media (max-width: 768px) {
   .blog-card {
@@ -108,7 +114,8 @@
   }
 
   .blog-title {
-    font-size: 1.4em; /* Make title smaller on mobile */
+    font-size: 1.4em;
+    margin-top: 80px; /* Make title smaller on mobile */
   }
 
   .blog-description {
@@ -129,12 +136,63 @@
     padding-top: 80px; /* Less padding for mobile */
     padding-bottom: 40px;
   }
+
+  .blog-post-content {
+    width: 100%;
+    padding: 20px;
+    margin: 0; /* Remove margin */
+  }
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 1000px) {
+  .blog-card {
+    max-width: 100%; /* Allow full width */
+    margin: 10px 0;
+  }
+
+  .blog-title {
+    font-size: 1.4em;
+    margin-top: 80px; /* Make title smaller on mobile */
+  }
+
+  .blog-description {
+    font-size: 0.9em; /* Smaller description font */
+  }
+
+  .blog-link {
+    font-size: 1em; /* Adjust link font size */
+  }
+
+  .blog-heading {
+    font-size: 2em; /* Smaller heading */
+    margin-bottom: 20px; /* Adjust margin */
+  }
+
+  /* Adjust padding in blog section */
+  .blog-section {
+    padding-top: 80px; /* Less padding for mobile */
+    padding-bottom: 40px;
+  }
+
+  .blog-post-content {
+    width: 100%;
+    padding: 20px;
+    margin: 0; /* Remove margin */
+  }
 }
 
 /* Very small screens */
 @media (max-width: 480px) {
   .blog-title {
-    font-size: 1.2em; /* Further reduce title font size */
+    font-size: 1.2em;
+    margin-top: 80px; /* Further reduce title font size */
+  }
+
+  .blog-post-content {
+    width: 100%;
+    padding: 20px;
+    margin: 0;
   }
 
   .blog-description {

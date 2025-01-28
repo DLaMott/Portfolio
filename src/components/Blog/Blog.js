@@ -51,7 +51,7 @@ const Blog = () => {
                 paddingBottom: "30px",
               }}
             >
-              <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }}>
+              <h1 style={{ fontSize: "2.1em", paddingBottom: "20px", marginTop: "80px" }}>
                 Welcome to My <strong className="purple">Blog</strong>
               </h1>
             </Col>

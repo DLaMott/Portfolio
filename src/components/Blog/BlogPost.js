@@ -16,7 +16,7 @@ const BlogPost = () => {
       .then((res) => fetch(res.default))
       .then((response) => response.text())
       .then((text) => {
-        console.log("Markdown content loaded: ", text); // Log the content of the markdown
+ 
         setContent(text);
       })
       .catch((err) => console.error("Error fetching markdown file:", err));
@@ -28,7 +28,6 @@ const BlogPost = () => {
 
       const match = /language-(\w+)/.exec(className || '');
       if (match) {
-        console.log("Code Block Detected: Language =", match[1], "Value =", children);
         return (
           <SyntaxHighlighter
             {...rest}
@@ -40,7 +39,6 @@ const BlogPost = () => {
           </SyntaxHighlighter>
         );
       } else {
-        console.log("No specific language, defaulting to <code>:", children);
         return <code {...rest}>{children}</code>;
       }
     },
@@ -56,24 +54,22 @@ const BlogPost = () => {
           left: 0,
           width: "100%",
           height: "100%",
-          zIndex: 0, // Send particles to the back
+          zIndex: 0,
         }}
       >
         <Particle />
       </div>
 
       {/* Blog post content */}
-      <div
+      <div className="blog-post-content" 
         style={{
-          position: "relative", // Ensures this is above particles
-          backgroundColor: "#f5f5f5",
+          position: "relative",
           minHeight: "100vh",
-          width: "66.6%",
           margin: "0 auto",
           padding: "50px 20px",
           boxShadow: "0 4px 10px rgba(0, 0, 0, 0.1)",
           borderRadius: "16px",
-          zIndex: 1, // Content above particles
+          zIndex: 1,
         }}
       >
         <Container>
@@ -85,7 +81,7 @@ const BlogPost = () => {
                 paddingBottom: "30px",
               }}
             >
-              <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }}>
+              <h1 style={{ fontSize: "2.1em", paddingBottom: "20px", marginTop: "80px" }}>
                 Blog Post: <strong className="purple">{slug.replace("-", " ")}</strong>
               </h1>
             </Col>
@@ -107,7 +103,7 @@ const BlogPost = () => {
               >
                 <ReactMarkdown
                   remarkPlugins={[remarkGfm]}
-                  components={renderers} // Using custom renderer for code blocks
+                  components={renderers}
                 >
                   {content}
                 </ReactMarkdown>
