@@ -81,7 +81,7 @@ const BlogPost = () => {
                 paddingBottom: "30px",
               }}
             >
-              <h1 style={{ fontSize: "2.1em", paddingBottom: "20px", marginTop: "80px" }}>
+              <h1 style={{ fontSize: "2.1em", paddingBottom: "20px", marginTop: "80px" , color: "white"}}>
                 Blog Post: <strong className="purple">{slug.replace("-", " ")}</strong>
               </h1>
             </Col>
@@ -99,6 +99,7 @@ const BlogPost = () => {
                   textAlign: "justify",
                   fontSize: "1.1em",
                   margin: "0 auto",
+                   color: "white"
                 }}
               >
                 <ReactMarkdown

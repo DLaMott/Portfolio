@@ -32,7 +32,7 @@ const Blog = () => {
       <div
         style={{
           position: "relative", // Ensures this is above particles
-          backgroundColor: "#f5f5f5",
+          backgroundColor: "#333",
           minHeight: "100vh",
           width: "100%", // Ensure full width on mobile
           margin: "0 auto",
@@ -51,7 +51,7 @@ const Blog = () => {
                 paddingBottom: "30px",
               }}
             >
-              <h1 style={{ fontSize: "2.1em", paddingBottom: "20px", marginTop: "80px" }}>
+              <h1 style={{ fontSize: "2.1em", paddingBottom: "20px", marginTop: "80px", color: "white" }}>
                 Welcome to My <strong className="purple">Blog</strong>
               </h1>
             </Col>
@@ -74,7 +74,7 @@ const Blog = () => {
                     <div
                       style={{
                         fontSize: "1.2em",  // Match the font size of other text
-                        color: "#333",      // Darker text for better readability
+                        color: "white",      // Darker text for better readability
                         fontWeight: "600",  // Slightly bold for emphasis
                         marginBottom: "10px",
                         fontFamily: "Arial, sans-serif", // Match the font style with other text
