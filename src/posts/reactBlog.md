@@ -22,7 +22,7 @@ Before diving into the code, let’s quickly look at the libraries that helped u
 - Particles.js: This adds a cool particle animation effect in the background.
 Now, let’s dive into how we built the blog step by step!
 
-1. Setting Up the Blog Overview Page
+## 1. Setting Up the Blog Overview Page
 Our blog’s homepage needed to display a list of blog posts with titles, dates, and links to individual post pages. To make it engaging, we used a background particle effect with the Particle component.
 
 Here’s how we structured the homepage:
@@ -169,7 +169,7 @@ const sortedPosts = posts.sort((a, b) => new Date(b.date) - new Date(a.date));
 
 The blog post data includes an ID, title, slug (for routing), and date.
 
-2. Displaying the Full Post
+## 2. Displaying the Full Post
 When a user clicks on a post, we navigate to a new page where the full post is displayed. We used React Router to handle this navigation.
 
 The post content is loaded dynamically from markdown files using react-markdown. The markdown content is fetched based on the slug of the post, which is passed in the URL.
@@ -197,7 +197,7 @@ const renderers = {
 
 We passed this custom renderer to the ReactMarkdown component to ensure code blocks are rendered with syntax highlighting.
 
-3. Adding the Particle Background
+## 3. Adding the Particle Background
 One fun feature we added was a dynamic particle animation background. This makes the site feel more interactive and lively. We used a custom Particle component that renders the animation behind all the content.
 
 ```javascript
@@ -209,7 +209,7 @@ One fun feature we added was a dynamic particle animation background. This makes
 
 By placing it with a lower zIndex, we ensured the particles moved in the background while keeping the text and other content clear and readable.
 
-4. Wrapping Up
+## 4. Wrapping Up
 And that's it! We now have a fully functional React blog with a clean layout, dynamic content loading, and some cool extras like syntax-highlighted code blocks and a particle background. Here’s a recap of what we achieved:
 
 - Dynamic Blog Post Loading: Posts are loaded dynamically based on their slug, allowing us to easily add new content.
