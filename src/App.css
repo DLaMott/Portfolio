@@ -37,6 +37,10 @@
   }
 }
 
+code {
+  background-color: black;
+}
+
 /* Ensure .blog-card is responsive on smaller screens */
 .blog-card {
   margin: 20px auto;
@@ -104,6 +108,7 @@
   width: 66.6%;
   padding: 20px;
   margin: 0;
+  background-color: "white";
 }
 
 /* Mobile responsive adjustments */
