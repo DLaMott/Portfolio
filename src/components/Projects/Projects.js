@@ -2,15 +2,15 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
-import npc from "../../Assets/Projects/npc.png";
-import snake from "../../Assets/Projects/snake.png";
-import imageAi from "../../Assets/Projects/imageAi.png";
-import data from "../../Assets/Projects/data.png";
-import space from "../../Assets/Projects/space.png";
-import chip8 from "../../Assets/Projects/chip8.png";
-import genconsumer from "../../Assets/Projects/ConsumerGenerator.PNG";
-import restgen from "../../Assets/Projects/RestGenerator.PNG";
-import kafkacon from "../../Assets/Projects/KafkaConsumer.PNG";
+import npc from "C:/Users/dylan/Documents/Portfolio/src/Assets/Projects/npc.png";
+import snake from "C:/Users/dylan/Documents/Portfolio/src/Assets/Projects/snake.png";
+import imageAi from "C:/Users/dylan/Documents/Portfolio/src/Assets/Projects/imageAi.png";
+import data from "C:/Users/dylan/Documents/Portfolio/src/Assets/Projects/data.png";
+import space from "C:/Users/dylan/Documents/Portfolio/src/Assets/Projects/space.png";
+import chip8 from "C:/Users/dylan/Documents/Portfolio/src/Assets/Projects/chip8.png";
+import genconsumer from "C:/Users/dylan/Documents/Portfolio/src/Assets/Projects/ConsumerGenerator.PNG";
+import restgen from "C:/Users/dylan/Documents/Portfolio/src/Assets/Projects/RestGenerator.PNG";
+import kafkacon from "C:/Users/dylan/Documents/Portfolio/src/Assets/Projects/KafkaConsumer.png";
 
 function Projects() {
   return (
