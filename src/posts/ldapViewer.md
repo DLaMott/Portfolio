@@ -131,7 +131,7 @@ When a user selects a directory, the input type, and passes input we should hand
 
 
 ### Creating clients
-Ldapts documentation is slim yet their [readme](https://github.com/ldapts/ldapts/blob/main/README.md) showcases how simple it can be to create clients. The below implementation does not handle client pooling and within a high envrionment is is recommended to implement pooling as maintaining connections is one of the most `costly` operations in regard to LDAP protocols.
+Ldapts documentation is slim yet their [readme](https://github.com/ldapts/ldapts/blob/main/README.md) showcases how simple it can be to create clients. The below implementation does not handle client pooling and within a high envrionment is is recommended to implement pooling as maintaining connections is one of the most *costly* operations in regard to LDAP protocols.
 
 ```javascript
 
@@ -383,16 +383,16 @@ That’s the walkthrough of building a dynamic React blog with markdown support.
 ## Possible customizations:
 
 ### Add More Directories
-You can add more directories by extending the environment variables and modifying the `server.js` and `app.js` files to handle additional directory connections.
+You can add more directories by extending the environment variables and modifying the *server.js* and *app.js* files to handle additional directory connections.
 
 ### Enhance Search Capabilities
-You can add filters or advanced search options by modifying the `filter` parameter in the `ldapts` search queries.
+You can add filters or advanced search options by modifying the filter parameter in the ldapts search queries.
 
 ### Add Authentication
 Secure the viewer by adding authentication mechanisms (e.g., JWT, session-based authentication) in the backend.
 
 ### Style the UI
-Customize the design by modifying the CSS in `App.css` to match your branding or preferences.
+Customize the design by modifying the CSS in App.css to match your branding or preferences.
 
 ### Support Write Operations
 Extend the backend and frontend to support creating, updating, or deleting LDAP entries.
