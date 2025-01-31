@@ -6,7 +6,9 @@ import pdf from "../../Assets/../Assets/DylanLaMott.pdf";
 import { AiOutlineDownload } from "react-icons/ai";
 import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
+import { Helmet } from "react-helmet";
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
+
 
 const resumeLink =
   "https://raw.githubusercontent.com/DLaMott/portfolio/master/src/Assets/DylanLaMott.pdf";
@@ -19,8 +21,15 @@ function ResumeNew() {
   }, []);
 
   return (
+
     <div>
+
       <Container fluid className="resume-section">
+                  <div>
+                    <Helmet>
+                      <link rel="canonical" href="https://portfolio-dlamott.vercel.app/resume" />
+                    </Helmet>
+                  </div>
         <Particle />
         <Row style={{ justifyContent: "center", position: "relative" }}>
           <Button

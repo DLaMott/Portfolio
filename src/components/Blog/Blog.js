@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Particle from "../Particle";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const Blog = () => {
   const posts = [
@@ -13,7 +14,14 @@ const Blog = () => {
   const sortedPosts = posts.sort((a, b) => new Date(b.date) - new Date(a.date));
 
   return (
+
+
     <div style={{ position: "relative", minHeight: "100vh" }}>
+              <div>
+                <Helmet>
+                  <link rel="canonical" href="https://portfolio-dlamott.vercel.app/blog" />
+                </Helmet>
+              </div>
       {/* Particles positioned behind everything */}
       <div
         style={{

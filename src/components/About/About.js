@@ -4,10 +4,17 @@ import Particle from "../Particle";
 import Github from "./Github";
 import Aboutcard from "./AboutCard";
 import laptopImg from "../../Assets/about.png";
+import { Helmet } from "react-helmet";
 
 function About() {
   return (
+
     <Container fluid className="about-section">
+              <div>
+                <Helmet>
+                  <link rel="canonical" href="https://portfolio-dlamott.vercel.app/about" />
+                </Helmet>
+              </div>
       <Particle />
       <Container>
         <Row style={{ justifyContent: "center", padding: "10px" }}>

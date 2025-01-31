@@ -70,6 +70,7 @@ const BlogPost = () => {
                 <meta property="og:description" content={`A deep dive into ${slug.replaceAll("-", " ")}. Learn how to build and optimize it.`} />
                 <meta property="og:type" content="article" />
                 <meta property="og:url" content={`https://portfolio-dlamott.vercel.app/blog/${slug}`} />
+                <link rel="canonical" href={`https://portfolio-dlamott.vercel.app/blog/${slug}`} />
               </Helmet>
 
       {/* Blog post content */}

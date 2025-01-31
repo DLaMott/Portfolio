@@ -11,10 +11,18 @@ import chip8 from "../../Assets/Projects/chip8.png";
 import genconsumer from "../../Assets/Projects/ConsumerGenerator.PNG";
 import restgen from "../../Assets/Projects/RestGenerator.PNG";
 import kafkacon from "../../Assets/Projects/KafkaConsumer.PNG";
+import { Helmet } from "react-helmet";
 
 function Projects() {
   return (
+
     <Container fluid className="project-section">
+          <div>
+            <Helmet>
+              <title>My Title</title>
+              <link rel="canonical" href="https://portfolio-dlamott.vercel.app/project" />
+            </Helmet>
+          </div>
       <Particle />
       <Container>
         <h1 className="project-heading">
