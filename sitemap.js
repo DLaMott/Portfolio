@@ -17,12 +17,14 @@ const path = require("path");
     
   ];
 
+  const lastModified = new Date().toISOString().split("T")[0];
+
   // Create a SitemapStream instance
   const sitemapStream = new SitemapStream({ hostname: baseUrl });
 
   // Add routes to the sitemap
   for (const route of routes) {
-    sitemapStream.write({ url: route, changefreq: "daily", priority: 0.7 });
+    sitemapStream.write({ url: route, changefreq: "daily", priority: 0.7, lastmod: lastModified });
   }
 
   sitemapStream.end();
