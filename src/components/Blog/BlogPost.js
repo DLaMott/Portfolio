@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import Particle from "../Particle"; // Optional background particles
+import Particle from "../Particle";
 import { useParams } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { atomDark } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { Helmet } from "react-helmet";
+
 
 const BlogPost = () => {
   const { slug } = useParams();
@@ -60,6 +62,16 @@ const BlogPost = () => {
         <Particle />
       </div>
 
+              <Helmet>
+                <title>{`${slug.replace("-", " ")}`}</title>
+                <meta name="description" content={`A deep dive into ${slug.replaceAll("-", " ")}. Learn how to build and optimize it.`} />
+                <meta name="keywords" content={`React, LDAP,Java,Node, Tips, Backend, Frontend, Markdown, Blog, Web Development, Tutorial, ${slug}`} />
+                <meta property="og:title" content={`${slug.replace("-", " ")} | React Blog`} />
+                <meta property="og:description" content={`A deep dive into ${slug.replaceAll("-", " ")}. Learn how to build and optimize it.`} />
+                <meta property="og:type" content="article" />
+                <meta property="og:url" content={`https://portfolio-dlamott.vercel.app/blog/${slug}`} />
+              </Helmet>
+
       {/* Blog post content */}
       <div className="blog-post-content" 
         style={{
@@ -83,7 +95,7 @@ const BlogPost = () => {
               }}
             >
               <h1 style={{ fontSize: "2.1em", paddingBottom: "20px", marginTop: "80px" , color: "white"}}>
-                Blog Post: <strong className="purple">{slug.replace("-", " ")}</strong>
+                Blog Post: <strong className="purple">{slug.replaceAll("-", " ")}</strong>
               </h1>
             </Col>
           </Row>
