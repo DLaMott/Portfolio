@@ -11,9 +11,9 @@ const path = require("path");
     "/project",
     "/resume",
     "/blog",
-    "/blog/reactBlog",
-    "/blog/ldapViewer",
-    "/blog/timedLdapTemplate" 
+    "/blog/React-Markdown-Blog",
+    "/blog/Ldap-Directory-Viewer",
+    "/blog/Timed-Ldap-Template"
     
   ];
 
