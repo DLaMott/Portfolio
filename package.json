@@ -29,7 +29,7 @@
     "react-scripts": "5.0.0",
     "react-syntax-highlighter": "^15.6.1",
     "react-tsparticles": "^1.42.2",
-    "remark-gfm": "^4.0.0",
+    "remark-gfm": "^3.0.1",
     "sitemap": "^8.0.0",
     "typewriter-effect": "^2.18.2",
     "web-vitals": "^2.1.4"

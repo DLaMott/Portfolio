@@ -26,7 +26,7 @@ const BlogPost = () => {
 
   // Custom renderer for code blocks
   const renderers = {
-    code({ children, className, node, ...rest }) {
+    code({ children, className, node, inline, ...rest }) {
 
       const match = /language-(\w+)/.exec(className || '');
       if (match) {
