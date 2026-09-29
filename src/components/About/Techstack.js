@@ -15,6 +15,7 @@ import {
   SiKubernetes,
   SiDocker,
   SiAmazonaws,
+  SiGo,
 } from "react-icons/si";
 import Tooltip, { tooltipClasses } from '@mui/material/Tooltip';
 import { hexToRgb, styled } from '@mui/material/styles';
@@ -94,6 +95,11 @@ function Techstack() {
       <Col xs={4} md={2} className="tech-icons">
       <BootstrapTooltip disableFocusListener title="AWS" placement="top">
       <div><SiAmazonaws /></div>
+        </BootstrapTooltip>
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+      <BootstrapTooltip disableFocusListener title="Golang" placement="top">
+      <div><SiGo /></div>
         </BootstrapTooltip>
       </Col>
     </Row>

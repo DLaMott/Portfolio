@@ -1,12 +1,12 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
+import { SiClaude, SiGithubcopilot } from "./BrandIcons";
 import {
   SiPycharm,
   SiVisualstudiocode,
   SiPostman,
   SiIntellijidea,
   SiVercel,
-  SiGo,
 } from "react-icons/si";
 import Tooltip, { tooltipClasses } from '@mui/material/Tooltip';
 import { hexToRgb, styled } from '@mui/material/styles';
@@ -54,8 +54,13 @@ function Toolstack() {
         </BootstrapTooltip>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-      <BootstrapTooltip disableFocusListener title="Golang" placement="top">
-        <div><SiGo /></div>
+      <BootstrapTooltip disableFocusListener title="Claude" placement="top">
+        <div><SiClaude /></div>
+        </BootstrapTooltip>
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+      <BootstrapTooltip disableFocusListener title="Copilot" placement="top">
+        <div><SiGithubcopilot /></div>
         </BootstrapTooltip>
       </Col>
     </Row>
