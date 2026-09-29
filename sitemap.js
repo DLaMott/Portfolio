@@ -13,7 +13,7 @@ const path = require("path");
     "/blog",
     "/blog/React-Markdown-Blog",
     "/blog/Ldap-Directory-Viewer",
-    "/blog/Timed-Ldap-Template"
+    "/blog/Beanshell-XML-Linter"
     
   ];
 

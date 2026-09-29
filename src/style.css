@@ -720,3 +720,9 @@ button:focus {
   }
 }
 
+
+.blog-post-content img {
+  max-width: 100%;
+  height: auto;
+  margin: 20px 0;
+}

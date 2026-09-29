@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 260" role="img" aria-labelledby="t d">
+  <title id="t">Before and after masking</title>
+  <desc id="d">The same three lines of BeanShell shown raw and masked. Comment and string contents are replaced with spaces, so patterns only match real code and line numbers stay the same.</desc>
+  <rect width="900" height="260" rx="14" fill="#1f1f2b"/>
+  <g font-family="Arial, sans-serif" fill="#ffffff">
+    <text x="30" y="38" font-size="16" font-weight="bold">Raw source</text>
+    <text x="30" y="150" font-size="16" font-weight="bold">Masked (what the rules see)</text>
+  </g>
+  <g font-family="Consolas, 'Courier New', monospace" font-size="15">
+    <rect x="30" y="50" width="840" height="76" rx="8" fill="#14141c"/>
+    <text x="46" y="76" fill="#e6e6f0">1  String note = <tspan fill="#8fe0a0">"call .printStackTrace() later"</tspan>;</text>
+    <text x="46" y="98" fill="#e6e6f0">2  <tspan fill="#8b8ba7">// TODO: remove this</tspan></text>
+    <text x="46" y="120" fill="#e6e6f0">3  e.printStackTrace();</text>
+    <rect x="30" y="162" width="840" height="76" rx="8" fill="#14141c"/>
+    <text x="46" y="188" fill="#e6e6f0" xml:space="preserve">1  String note = "                              ";</text>
+    <text x="46" y="210" fill="#e6e6f0" xml:space="preserve">2  //                    </text>
+    <text x="46" y="232" fill="#ffd98f" xml:space="preserve">3  e.printStackTrace();   &#8592; only real match</text>
+  </g>
+</svg>
