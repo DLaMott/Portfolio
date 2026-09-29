@@ -11,6 +11,7 @@ import chip8 from "../../Assets/Projects/chip8.png";
 import genconsumer from "../../Assets/Projects/ConsumerGenerator.PNG";
 import restgen from "../../Assets/Projects/RestGenerator.PNG";
 import kafkacon from "../../Assets/Projects/KafkaConsumer.PNG";
+import beanshelllinter from "../../Assets/Projects/beanshellLinter.svg";
 import { Helmet } from "react-helmet";
 
 function Projects() {
@@ -33,6 +34,16 @@ function Projects() {
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
 
+        <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={beanshelllinter}
+              isBlog={false}
+              title="BeanShell XML Linter"
+              description="A CLI linter for the BeanShell embedded in SailPoint IdentityIQ XML files (Rules, Workflows and Forms). It validates syntax with the real BeanShell parser and flags style and security anti-patterns mapped to CWEs, so bad rules fail the pipeline before they reach an environment. Ships with Docker support, CI templates and GitHub releases."
+              ghLink="https://github.com/DLaMott/Beanshell-XML-Linter"
+              demoLink="https://portfolio-dlamott.vercel.app/blog/Beanshell-XML-Linter"
+            />
+          </Col>
         <Col md={4} className="project-card">
             <ProjectCard
               imgPath={restgen}
