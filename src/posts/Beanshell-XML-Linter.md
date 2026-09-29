@@ -126,19 +126,17 @@ That is the whole rule. Match a pattern against the masked text, map the positio
 
 **Security patterns, each mapped to a CWE:**
 
-| Pattern | CWE |
-|---|---|
-| Weak crypto (MD5, DES, bare AES) | CWE-327 |
-| `java.util.Random` instead of `SecureRandom` | CWE-330 |
-| Unguarded Java deserialization | CWE-502 |
-| Disabled TLS certificate or hostname checks | CWE-295 |
-| OS command execution | CWE-78 |
-| XML parsing without XXE protection | CWE-611 |
-| Logging values that look sensitive | CWE-532 |
-| SQL or LDAP built by string concatenation | CWE-89 / CWE-90 |
-| File paths built by string concatenation | CWE-22 |
-| URLs built from a variable | CWE-918 |
-| Non-constant `Class.forName()` arguments | CWE-470 |
+* Weak crypto (MD5, DES, bare AES): CWE-327
+* `java.util.Random` instead of `SecureRandom`: CWE-330
+* Unguarded Java deserialization: CWE-502
+* Disabled TLS certificate or hostname checks: CWE-295
+* OS command execution: CWE-78
+* XML parsing without XXE protection: CWE-611
+* Logging values that look sensitive: CWE-532
+* SQL or LDAP built by string concatenation: CWE-89 and CWE-90
+* File paths built by string concatenation: CWE-22
+* URLs built from a variable: CWE-918
+* Non-constant `Class.forName()` arguments: CWE-470
 
 ## What It Does Not Do
 
